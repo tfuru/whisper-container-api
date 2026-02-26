@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv
+env/
+venv/
+
+# Environment
+.env
+.python-version
+
+# Whisper Models (HuggingFace cache)
+models/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# tmp
+tmp/
