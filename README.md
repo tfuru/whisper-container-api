@@ -31,14 +31,14 @@ podman compose logs -f
 ### health check
 
 ```bash
-curl http://localhost:8000/health
+curl http://localhost:8030/health
 ```
 
 ### transcription
 
 ```bash
 cd tmp/
-curl -X POST http://localhost:8000/transcribe -F "file=@test.wav"
+curl -X POST http://localhost:8030/transcribe -F "file=@test.wav"
 ```
 
 ## API仕様
