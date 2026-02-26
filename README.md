@@ -45,13 +45,29 @@ curl -X POST http://localhost:8000/transcribe -F "file=@test.wav"
 
 ### health check
 
-```
-GET /health
-```
+サーバーが正常に動作しているか確認します。
+
+- **URL**: `/health`
+- **Method**: `GET`
+- **Response**:
+    ```json
+    {
+      "status": "ok"
+    }
+    ```
 
 ### transcription
-wav ファイルを POST する
 
-```
-POST /transcribe 
-```
+音声ファイルをアップロードして文字起こしを実行します。
+
+- **URL**: `/transcribe`
+- **Method**: `POST`
+- **Request (Multipart Form Data)**:
+    - `file`: 音声ファイル（wav, mp3, m4a）
+- **Response**:
+    ```json
+    {
+      "filename": "test.wav",
+      "transcription": "こんにちは、今日はいい天気ですね。"
+    }
+    ```
